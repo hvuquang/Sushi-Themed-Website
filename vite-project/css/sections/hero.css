@@ -1,9 +1,30 @@
 .hero {
+    display: flex;
+    /* block-container of hero-image__overlay */
     position: relative;
+    min-height: calc(100vh - 74px);
+    overflow: hidden;
 }
 
 .hero-image {
     position: absolute;
+    flex: 1;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 5;
+}
+
+.hero-image img {
+    width: 120%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-image__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
     background-color: var(--primary-color);
-    width: 25%;
+    z-index: -1;
 }
