@@ -1,0 +1,9 @@
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 25%;
+}

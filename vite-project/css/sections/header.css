@@ -5,9 +5,58 @@
 
 .header__logo {
     flex: 1;
-    background-color: var(--primary-color);
+    display: flex;
+
+    position: relative;
+    padding: 20px;
+    text-transform: uppercase;
 }
 
-.header__menu {
-    flex:1;
+.header__logo--overlay {
+    position: absolute;
+    /* top right bottom left */
+    inset: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+.header__logo h4 {
+    z-index: 2;
+    color: #fff;
+    padding-left: 20px;
+}
+
+.header__menu, .header__menu-mobile {
+    display: flex;
+    flex: 1.235;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 64px;
+
+    list-style: none;
+}
+
+.header__menu li {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.header__menu li img {
+    width: 24px;
+    height: 24px;
+    /* use to resize <img> or <video> */
+    object-fit: contain;
+}
+
+.header__menu-mobile {
+    display: none;
+    gap: 20px;
+
+    position: relative;
 }
